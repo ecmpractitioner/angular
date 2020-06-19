@@ -1,10 +1,5 @@
-<button class="btn btn-primary" [disabled]="!addServer">Add Server</button>
+<button class="btn btn-primary" [disabled]="!addServer" (click)="onCreateServer()">Add Server</button>
 <br>
+<p>{{serverCreationStatus}}</p>
 <app-server></app-server>
 <app-server></app-server>
-
-<ul>
-    <li>When you want to set dom property ex: disabled for a button, use ONLY property binding</li>
-    <li>When you want to set a text ex: for a div tag, use string interpolation. </li>
-    
-</ul>
