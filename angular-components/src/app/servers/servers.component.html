@@ -4,6 +4,7 @@
 <button class="btn btn-primary" [disabled]="!addServer" (click)="onCreateServer()">Add Server</button>
 <br>
 <p *ngIf="serverCreated">{{serverCreationStatus}}</p>
+<p *ngIf="!serverCreated">{{serverCreationStatus}}</p>
 <app-server></app-server>
 <app-server></app-server>
 
