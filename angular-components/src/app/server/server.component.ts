@@ -1,19 +1,3 @@
-// import { Component, OnInit } from '@angular/core';
-
-// @Component({
-//   selector: 'app-server',
-//   templateUrl: './server.component.html',
-//   styleUrls: ['./server.component.css']
-// })
-// export class ServerComponent implements OnInit {
-
-//   constructor() { }
-
-//   ngOnInit(): void {
-//   }
-
-// }
-
 import {Component} from '@angular/core';
 
 //whatever you pass within component are the metadata about this class which will be stored
@@ -22,5 +6,11 @@ import {Component} from '@angular/core';
   templateUrl:'./server.component.html' // this holds the html code for this componenet
 })
 export class ServerComponent {
+  serverId: number=20;
+  serverStatus: string='offline';
+
+  getServerStatus(){
+    return this.serverStatus;
+  }
 
 }
