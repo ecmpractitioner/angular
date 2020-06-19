@@ -1,5 +1,13 @@
+<label for="server">Server Name</label>
+<input type="text" name="server" class="form-control" id="server"(input)="onUpdateServerName($event)">
+<p>Server Name is: {{serverName}}</p>
+<br>
 <button class="btn btn-primary" [disabled]="!addServer" (click)="onCreateServer()">Add Server</button>
 <br>
 <p>{{serverCreationStatus}}</p>
 <app-server></app-server>
 <app-server></app-server>
+
+<ul>
+    <li>Whenver we want to pass event value to template, use $event</li>
+</ul>
