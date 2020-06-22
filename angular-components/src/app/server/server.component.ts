@@ -19,7 +19,6 @@ export class ServerComponent {
   constructor(){
 
     const random = Math.random();
-    console.log(random);
     this.serverStatus=random<0.5?"Offline":"Online";
     
   }
