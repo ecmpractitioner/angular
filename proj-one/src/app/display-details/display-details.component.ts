@@ -17,13 +17,12 @@ export class DisplayDetailsComponent implements OnInit {
 
   onClickDisplay(){
     this.toggleText=!this.toggleText;
-    this.log.push(this.count++);
+    this.log.push(new Date());
     
   }
 
   getColor(){
     const a=this.log.length>=5?'blue':'white';
-    console.log(a);
     return a;
   }
 }

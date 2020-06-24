@@ -5,4 +5,4 @@
 <div class="container">
     <p *ngIf="toggleText">Secret Password is : Kalla Gaadi</p>
 </div>
-<div class="container" *ngFor="let count of log" [ngStyle]="{backgroundColor:count>=5?'blue':'transparent'}">{{count}}</div>
+<div class="container" *ngFor="let count of log;let i=index" [ngStyle]="{backgroundColor:i>=4?'blue':'transparent'}" [ngClass]="{'white-text': i>=4}">{{count}}</div>
