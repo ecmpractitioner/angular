@@ -1,0 +1,8 @@
+<br>
+<div class="container">
+    <button class="btn btn-primary" (click)="onClickDisplay()">Display Details</button>
+</div>
+<div class="container">
+    <p *ngIf="toggleText">Secret Password is : Kalla Gaadi</p>
+</div>
+<div class="container" *ngFor="let count of log" [ngStyle]="{backgroundColor:getColor()}">{{count}}</div>
