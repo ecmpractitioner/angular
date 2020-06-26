@@ -1,0 +1,12 @@
+<div class="card" style="width: 18rem;">
+    <div class="row">
+      <div class="card-body">
+        <h5 class="card-title">{{elem.name}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted"></h6>
+        <p>
+          <strong class="card-text" *ngIf="elem.type==='server'" [ngStyle]="{'color': 'red'}">{{elem.content}}</strong>
+          <em *ngIf="elem.type==='blueprint'" [ngStyle]="{'color': 'blue'}">{{elem.content}}</em>
+        </p>
+      </div>
+    </div>
+  </div>    

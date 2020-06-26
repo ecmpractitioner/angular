@@ -1,0 +1,28 @@
+<div class="container text-primary">Add new Servers or BluePrint</div>
+<br>
+<form class="container-fluid" action="/">
+  <div class="form-row">
+    <div class="form-group col-sm-12">
+      <label for="name"><strong>Server Name</strong></label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Server Name" [(ngModel)]="serverName">
+    </div>
+
+  </div>
+  <div class="form-row">
+    <div class="form-group col-sm-12">
+      <label for="content"><strong>Server Content</strong></label>
+      <input type="text" class="form-control" id="content" name="content" placeholder="Server Content"
+        [(ngModel)]="serverBluePrint">
+    </div>
+  </div>
+
+  
+  <div class="form-row">
+    <div class="form-group col-sm-2">
+      <button type="button" class="btn btn-primary" (click)="onAddServer($event)">Add Server</button>
+    </div>
+    <div class="form-group col-sm-2">
+      <button type="button" class="btn btn-primary" (click)="onAddServerBlupePrint($event)">Add Server
+        BluePrint</button>
+    </div>
+  </div>
