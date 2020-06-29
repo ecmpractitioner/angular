@@ -4,7 +4,12 @@
 (bpCreated)="onBlueprintAdded($event)">
 </app-cockpit>
 <app-server-element *ngFor="let element of elements"
-[srvElement]="element"></app-server-element>
+[srvElement]="element">
+<p>
+  <strong class="card-text" *ngIf="element.type==='server'" [ngStyle]="{'color': 'red'}">{{element.content}}</strong>
+  <em *ngIf="element.type==='blueprint'" [ngStyle]="{'color': 'blue'}">{{element.content}}</em>
+</p>
+</app-server-element>
 <br>
 
 <ul>
@@ -23,6 +28,12 @@
       <li>Viewchild can be used to access HTML element before executing a method ex: click of a button, input change etc</li>
       <li>With viewchild, we can also pass components if required not just HTML element</li>
       <li>DO NOT CHANGE THE VALUE OF THE ELEMENT USING VIEW CHILE : this.serverContnet.nativeElement.value='Some value'</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>use ngContent to project HTML code for a given componenet. Angular by default ignores the content between &ltcomponents&gtThis text is ignored &ltcomponents &gt</li>
+      <li>using ngContent, we can have this content projected to component. Look in cockpit.html and app.html</li>
     </ul>
   </li>
 </ul>

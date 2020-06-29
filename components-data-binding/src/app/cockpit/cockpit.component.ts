@@ -20,7 +20,7 @@ export class CockpitComponent implements OnInit {
     this.serverCreated.emit({ serverName: serverName.value, serverContent: this.serverContent.nativeElement.value  });
   }
 
-  onAddServerBlupePrint(serverName:HTMLInputElement,serverContent:HTMLInputElement) {
+  onAddServerBlupePrint(serverName:HTMLInputElement) {
     this.blueprintCreated.emit({ serverName: serverName.value, serverContent:this.serverContent.nativeElement.value });
   }
 
