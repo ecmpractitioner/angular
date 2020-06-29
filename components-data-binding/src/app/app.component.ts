@@ -10,6 +10,8 @@ export class AppComponent {
   
   elements = [{type:'server',name:'TestServer',content:'Just a Test!'}];
 
+  serverInputContent
+
   onServerAdded(serverData:{serverName:string,serverContent:string}) {
 
     this.elements.push({
